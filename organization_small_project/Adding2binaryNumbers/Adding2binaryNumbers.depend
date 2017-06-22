@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1498120004 source:c:\users\foush\desktop\embeded\adding2binarynumbers\functions.c
+	"functions.h"
+
+1498119418 c:\users\foush\desktop\embeded\adding2binarynumbers\functions.h
+
+1498117056 source:c:\users\foush\desktop\embeded\adding2binarynumbers\main.c
+	<stdio.h>
+	<stdlib.h>
+	"functions.h"
+	<process.h>
+	<math.h>
+
+1498101447 c:\users\foush\desktop\embeded\adding2binarynumbers\functions.c
+	"functions.h"
+
