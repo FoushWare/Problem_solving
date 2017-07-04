@@ -2,7 +2,7 @@
 #include<stdio.h>       //for standard input output for console
 #include<math.h>        //for pow() function
 #include<unistd.h>      //for usleep function[GNU] but for windows you can use sleep()
-
+#include<assert.h>      //for assert function that crash the program if the condition is false
 
 int And(int a,int b){if(a>b) return b; else return a;}
 int OR(int a,int b){if(b>a) return b; else  return a;}
@@ -18,9 +18,11 @@ int n1[8],n2[8],si[8],ci[8];
 for (i=0;i<7;i++){n1[i]=n2[i]=0;}
 
 printf("enter first number \n");
-scanf("%d",&num1A);
-printf("enter second number \n");
-scanf("%d",&num2B);
+assert(scanf("%d",&num1A)==1);//it will crash the program if the number not integer
+
+printf("enter second number \n");//it will crash the program if the number not integer
+
+assert(scanf("%d",&num2B)==1);
 num1=num1A; //this is only for printing cause num1 will be manipulated and it's value will be changed
 num2=num2B;//this is only for printing cause num2 will be manipulated and it's value will be changed
 
@@ -91,12 +93,14 @@ int n1[8],n2[8],si[8],cp[8],cg[8],CIN[8];
 for (i=0;i<7;i++){n1[i]=n2[i]=CIN[i]=0;}
 
 printf("enter first number \n");
-scanf("%d",&num1A);
-printf("enter second number \n");
-scanf("%d",&num2B);
+assert(scanf("%d",&num1A)==1);//it will crash the program if the number not integer
 
-num1=num1A; //this is only for printing cause num1 will be manipulated and it's value will be changed
-num2=num2B;//this is only for printing cause num2 will be manipulated and it's value will be changed
+
+printf("enter second number \n");
+assert(scanf("%d",&num2B)==1);//it will crash the program if the number not integer
+
+num1=(int)num1A; //this is only for printing cause num1 will be manipulated and it's value will be changed
+num2=(int)num2B;//this is only for printing cause num2 will be manipulated and it's value will be changed
 
 /*binary representation*/
 i=7;
@@ -166,7 +170,8 @@ for(i=0;i<8;i++){
 printf("S%d = %d \n",i,si[7-i]);
 }
 
-}
+
+}//End of Ripple function
 void BlockCLA(){
 
 int num1,num1A,num2,num2B,i=0,cin,sum=0,C8=0;
@@ -175,9 +180,12 @@ int n1[16],n2[16],si[16],cp[16],cg[16],CIN[16];
 for (i=0;i<15;i++){n1[i]=n2[i]=CIN[i]=0;}
 
 printf("enter first number \n");
-scanf("%d",&num1A);
+assert(scanf("%d",&num1A)==1);//it will crash the program if the number not integer
+
+
 printf("enter second number \n");
-scanf("%d",&num2B);
+assert(scanf("%d",&num2B)==1);//it will crash the program if the number not integer
+
 
 num1=num1A; //this is only for printing cause num1 will be manipulated and it's value will be changed
 num2=num2B;//this is only for printing cause num2 will be manipulated and it's value will be changed
