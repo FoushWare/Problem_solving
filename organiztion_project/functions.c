@@ -35,10 +35,11 @@ do{
 }while( (num1 !=0) || (num2 !=0));
 
 printf("\n binary representation\n");
-
+usleep(900000);
 printf("num1 = %d \t",num1A);
 for(i=0;i<8;i++) printf("%d  ",n1[i]);
 
+usleep(900000);
 printf("\nnum2 = %d \t",num2B);
 for(i=0;i<8;i++) printf("%d  ",n2[i]);
 
@@ -47,11 +48,13 @@ cin=0;
 //the summation process
 for(i=7;i>=0;i--){
 si[i]=XOR(cin,XOR(n1[i],n2[i]));
-cin= OR(And(n1[i],n2[i]),And(cin,XOR(n1[i],n2[i])));
+//cin= OR(And(n1[i],n2[i]),And(cin,XOR(n1[i],n2[i])));
+cin= OR( OR(And(n1[i],n2[i]), And(n2[i],cin)) , And(n1[i],cin)  );
 }
 
 /*** printing the sum in the form of binary */
 
+usleep(900000);
 printf("\nsum: \t\t");
 for(i=0;i<8;i++) {
         printf("%d  ",si[i]);
@@ -60,9 +63,11 @@ for(i=0;i<8;i++) {
 sum=sum+ si[i]*pow(2,7-i);
 }
 
+usleep(900000);
 printf("\nsum of %d+%d = %d",num1A,num2B,sum);
 
 
+usleep(900000);
 /***printing the delay for every stage s0 s1 s2 s3 s4 s5 s6 s7***/
 printf("\n\n ******************printing the delay for every stage of sum s0 s1 s2 s3 s4 s5 s6 s7 **************");
 printf("\n sum \t \t delay \t carry \t delay\n");
@@ -70,6 +75,7 @@ for(i=0;i<=7;i++){
     printf("\n s%d \t =\t %d \t C%d \t %d \n",i,j,i+1,k);
     j+=2;
     k+=2;
+usleep(900000);
 }
 
 
