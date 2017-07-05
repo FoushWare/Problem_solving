@@ -6,7 +6,7 @@ int main()
 {
 int option;
    BEGING:  printf("\n\t\t******************SELCT ONE METHOD TO ADD TWO BINARY NUMBERS ************* \n");
-   printf(" 1-Ripple \n 2-Carry look ahead \n 3-block CLA \n 4-Exit");
+   printf(" 1-Ripple \n 2-Carry look ahead \n 3-Ripple_block CLA \n 4-Exit");
    printf("\nEnter your option: ");
    scanf("%d",&option);
    switch(option){

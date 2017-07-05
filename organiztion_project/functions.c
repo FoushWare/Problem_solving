@@ -247,7 +247,7 @@ sum=sum+ si[i]*pow(2,15-i);
 usleep(2000000);
 printf("\nsum of %d+%d = %d",num1A,num2B,sum);
 
-printf("\n *****calculate the critical path in this example it will be c16*****/n");
+printf("\n *****calculate the critical path in this example it will be c16***** \n");
 
 
 usleep(2000000);
@@ -259,15 +259,28 @@ printf("G0%d = %d  \n",i,cg[15-i]);
 }
 
 
-printf("Two gate delays in the AND-OR circuit for ci+1 For level 2 \n");
+printf("Two gate delays in the AND-OR circuit for ci+1 For  \n");
 for(i=0;i<=7;i++){
 printf("C%d = %d \n",i+1,CIN[7-i]);
 }
 
+printf("one gate delays ");
+
+for(i=0;i<=7;i++){
+printf("S%d = %d \n",i,si[i]);
+}
+
+
+
 usleep(2000000);
-printf("Two gate delays in the AND-OR circuit for ci+1\n");
+printf("one gate delay AND-OR circuit for ci+1\n");
 for(i=8;i<=15;i++){
 printf("C%d = %d \n",i+1,CIN[15-i]);
 }
 
+printf("one gate delay for s8 to s15\n");
+for(i=8;i<=15;i++){
+printf("S%d = %d \n",i,si[i]);
+
+}
 }
