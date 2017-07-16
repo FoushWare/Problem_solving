@@ -128,3 +128,60 @@ cout<<*i<<' ';
 }
 
 */
+/* second problem of hackerRank but here i'm adding some cout to make my_solution visual
+int main(){
+    vi v2;//empty vector
+
+  cout<<"Enter the size of the vector";
+  cin>>size;
+  cout<<"the size of the vector that will be entered"<<'\t'<<size<<'\n';
+
+  while(sz(v2) !=size){
+       cin>>a;
+       v2.pb(a);
+}
+
+ cout<<"the entered array"<<'\n';
+   tr(v2,i){
+       cout<<*i<<" ";
+   }
+   cout<<"\n";
+
+cout<<"enter the postion you want to earse";
+cin>>pos1;
+
+v2.erase(v2.begin()+pos1-1);
+
+
+//print the vetctor after erase the second element
+  tr(v2,i){
+       cout<<*i<<" ";
+   }
+
+cout<<"enter the range to earse";
+cin>>pos1>>pos2;
+
+v2.erase(v2.begin()+pos1-1,v2.begin()+pos2-1);
+
+cout<<"The size of the vector after last erase : "<< sz(v2)<<'\n';
+cout<<"the last vector is : \n";
+  tr(v2,i){
+       cout<<*i<<" ";
+   }
+
+ cout<<'\n';
+
+
+return 0;
+}
+*/
+
+
+
+
+
+
+
+
+
+
