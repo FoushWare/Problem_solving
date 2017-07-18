@@ -19,8 +19,6 @@ my own name  i.e( typedef int foush)
 
 */
 
-typedef vector<int> vi;
-typedef vector < vi > vvi;
 #define sz(a) int((a).size())
 #define pb push_back
 #define all(v)  (v).begin(),(v).end()
@@ -247,7 +245,29 @@ int main(void){
 */
 
 
+/*fourth problem in hackerRank sets_stl
+ *
+int main() {
+
+    cin>>queryNum;
+
+
+        for(int i=0;i<queryNum;i++){
+
+            cin>>y >>x;
+                if(y == 1){ s.insert(x);}
+                else if(y == 2){if( s.find(x) != s.end() )  s.erase(x); else{};}
+
+                else if(y==3){
+                    if( s.find(x) != s.end() )  cout<<"Yes\n";
+                    else cout<<"No\n";
+
+                }
+
+    }
 
 
 
+}
+*/
 
