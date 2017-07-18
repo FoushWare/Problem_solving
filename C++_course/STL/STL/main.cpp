@@ -38,6 +38,12 @@ const int MAX=100;
 int in[MAX];
 vector <int> v1 ={1,2,4};
 
+auto i=0;
+int size;
+int a;
+int pos1,pos2;
+int queryNum;
+
 void PrintLine(string sub=" " );
 void printVec(vector <int>&v2, string s);
 
@@ -178,7 +184,67 @@ return 0;
 
 
 
+/*Third problem of hackerRank   lower_bound
 
+int main(void){
+    // Enter your code here. Read input from STDIN. Print output to STDOUT
+
+         //cout<<"enter the number of the elements\n";
+       cin>>size;
+
+       vector<int> v1;
+        vector<int> Q1; // to not dublicate the query
+
+       //filling the vector with numbers
+      while((int)v1.size() != size){
+          cin>>a;
+          v1.push_back(a);
+      }
+
+      sort(v1.begin(),v1.end());
+
+      //get the query to found the number in the vector or not
+
+      vector<int>::iterator it ;
+
+        //Enter the number of queries
+        cin>>queryNum;
+
+        for(int i=0;i < queryNum;i++){
+
+            cin>>a;
+            //if the query dulbicated ignore it
+          if( find(Q1.begin(),Q1.end(),a) == Q1.end() ){
+          Q1.push_back(a);
+          }
+          else{
+              continue;
+          }
+               it=lower_bound(v1.begin(),v1.end(),a);           // get pointer to the value or the value greater than it
+
+        // i used  find  cause lower_bound() always don't go to end
+        //it get point to the requierd value or
+        //the value great than it
+
+        if(find(v1.begin(),v1.end(),a)!= v1.end()){
+
+         if(it !=v1.end()){cout<<"Yes "<<std::distance(v1.begin(),it)+1<<endl;}
+    }
+        else{
+           cout<<"NO "<<std::distance(v1.begin(),it)+1<<endl;
+        }
+
+
+        }//End of the for loop for quires
+
+
+
+        return 0;
+
+}
+
+
+*/
 
 
 
