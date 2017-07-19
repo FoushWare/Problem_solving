@@ -41,6 +41,10 @@ int size;
 int a;
 int pos1,pos2;
 int queryNum;
+int num;
+int mark=0;
+std::string student;
+map< string,int> M;
 
 void PrintLine(string sub=" " );
 void printVec(vector <int>&v2, string s);
