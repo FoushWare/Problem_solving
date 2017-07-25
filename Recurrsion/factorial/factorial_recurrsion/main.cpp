@@ -9,18 +9,18 @@ int main()
 
     cout << "Enter a positive integer: ";
     cin >> n;
+    int a =factorial(n);
 
-    cout << "Factorial of " << n << " = " << factorial(n)<<"\n";
-
+    cout << "Factorial of " << n << " = " << a<<"\n";
     return 0;
 }
 
 int factorial(int n)
 {
     //if(n > 1)
-     //   return n * factorial(n - 1);
+    //   return n * factorial(n - 1);
     //else
-     //   return 1;
+    //   return 1;
 
     //base_case that make the recursion stop
     if(n==1)  return 1;
