@@ -55,6 +55,11 @@ int main()
 }
 
 /* the editorial code
+ * Let ka will be amount of characters "A" in the string and kd will be
+ *  amount of characters "D" in the string. Then, if ka > kd, we print "Anton".
+ *  If ka < kd, we print "Danik". If ka = kd, we print "Friendship".
+
+Time complexity is .
 #include <iostream>
 #include <string>
 
