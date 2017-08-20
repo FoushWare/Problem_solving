@@ -1,4 +1,3 @@
-
 /*************************************************************************
     Year:2017                                                         *
     month: 8                                                      *
@@ -35,20 +34,16 @@ std::ios_base::sync_with_stdio(false);
 int k_kids=0,k_n=0,k_packs=0,k_num=0;
 long long int  k_total=0;
 char k_sign=' ';
-
 std::cin>>k_n>>k_packs;
 k_total=k_packs;
 vc v1;//sign
 vi v2;//packs
-
-
 for(int i=0;i<k_n;i++){
     std::cin>>k_sign;
     v1.pb(k_sign);
     std::cin>>k_num;
     v2.pb(k_num);
 }
-
 for(int i=0;i<k_n;i++){
     if(v1[i]=='+'){
         k_total += v2[i];
@@ -58,7 +53,21 @@ for(int i=0;i<k_n;i++){
         if(k_total <0){++k_kids; k_total+=v2[i];}
     }
 }
-
 std::cout<<k_total<<' '<<k_kids;
     return 0;
 }
+/* short code for it
+#include<iostream>
+using namespace std;
+main(){char c;__int64 n,k,q,l=0;
+    cin>>n>>k;
+    for(int i=0;i<n;i++)
+    {
+        cin>>c>>q;
+        if(c=='+')k+=q;
+        else
+        if(k>=q)k-=q;else l++;
+    }
+    cout<<k<<' '<<l;
+}
+*/
