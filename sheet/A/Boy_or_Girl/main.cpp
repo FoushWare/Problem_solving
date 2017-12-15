@@ -127,7 +127,12 @@ int main() {
 
 
 
+/*lessons learned */
 
+/*
+use set because it doesn't duplicate any valuses
+
+*/
 
 
 
