@@ -12,17 +12,35 @@ string zone5[]={"Qena","Luxor","Aswan"
 string zone6[]={"New Valley","North Sinai","Abu Simbel","Marsa Alam","Salloum","Halayeb","Shlateen"};
 
 string whichZone(string test);
-double cost(string origin,string des);
+double FirstKiloCost(string origin,string des);
+double SecondKiloCost(string origin,string des);
+string a;
+long double d;
+
+int units=0;
+
 
 
 int main()
 {
-string a;
-getline (cin, a);
 
+cout<<"enter number of units";
+cin >> units;
+
+
+
+cout<<"enter the weight";
+cin >> d;
+//std::cin.ignore(INT_MAX);
+cin.ignore(); // ignores \n that cin >> str has lefted (if user pressed enter key)
+
+cout<<"enter the origin place";
+getline (cin, a);
 string origin=a;
+
+cout<<"enter the destination place";
   getline (cin, a);
-string des=a;
+  string des=a;
 
 
 origin=whichZone(origin);
@@ -39,10 +57,20 @@ des=whichZone(des);
 
 
 
-    cout<<cost(origin,des)<<endl;
+double first=FirstKiloCost(origin,des);
+
+double second=SecondKiloCost(origin,des);
 
 
+if(d<=1){
+    cout<<first*units<<endl;
+}else{
+double extraWeight=d-1;
 
+ double cost=first+extraWeight*second;
+ cout<<cost*units<<endl;
+
+}
 
 
 
@@ -153,7 +181,7 @@ string whichZone(string test){
 
 
 
-double cost(string origin,string des){
+double FirstKiloCost(string origin,string des){
 
 
 
@@ -173,11 +201,207 @@ if(origin=="zone1"&&des=="zone1"){
 
 
 
+if(origin=="zone2"&&des=="zone1"){
+    return 25;
+}else if(origin=="zone2"&&des=="zone2"){
+    return 25;
+}else if(origin=="zone2"&&des=="zone3"){
+    return 35;
+}else if(origin=="zone2"&&des=="zone4"){
+    return 40;
+}else if(origin=="zone2"&&des=="zone5"){
+    return 60;
+}else if(origin=="zone2"&&des=="zone6"){
+    return 125;
+}else{}
+
+
+if(origin=="zone3"&&des=="zone1"){
+    return 35;
+}else if(origin=="zone3"&&des=="zone2"){
+    return 35;
+}else if(origin=="zone3"&&des=="zone3"){
+    return 35;
+}else if(origin=="zone3"&&des=="zone4"){
+    return 40;
+}else if(origin=="zone3"&&des=="zone5"){
+    return 60;
+}else if(origin=="zone3"&&des=="zone6"){
+    return 125;
+}else{}
+
+
+if(origin=="zone4"&&des=="zone1"){
+    return 40;
+}else if(origin=="zone4"&&des=="zone2"){
+    return 40;
+}else if(origin=="zone4"&&des=="zone3"){
+    return 40;
+}else if(origin=="zone4"&&des=="zone4"){
+    return 40;
+}else if(origin=="zone4"&&des=="zone5"){
+    return 60;
+}else if(origin=="zone4"&&des=="zone6"){
+    return 125;
+}else{}
+
+
+
+if(origin=="zone5"&&des=="zone1"){
+    return 60;
+}else if(origin=="zone5"&&des=="zone2"){
+    return 60;
+}else if(origin=="zone5"&&des=="zone3"){
+    return 60;
+}else if(origin=="zone5"&&des=="zone4"){
+    return 60;
+}else if(origin=="zone5"&&des=="zone5"){
+    return 60;
+}else if(origin=="zone5"&&des=="zone6"){
+    return 125;
+}else{}
+
+if(origin=="zone6"&&des=="zone1"){
+    return 125;
+}else if(origin=="zone6"&&des=="zone2"){
+    return 125;
+}else if(origin=="zone6"&&des=="zone3"){
+    return 125;
+}else if(origin=="zone6"&&des=="zone4"){
+    return 125;
+}else if(origin=="zone6"&&des=="zone5"){
+    return 125;
+}else if(origin=="zone6"&&des=="zone6"){
+    return 125;
+}else{}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 return 0;
 }
 
 
+double SecondKiloCost(string origin,string des){
 
+
+
+if(origin=="zone1"&&des=="zone1"){
+    return 4;
+}else if(origin=="zone1"&&des=="zone2"){
+    return 4;
+}else if(origin=="zone1"&&des=="zone3"){
+    return 5;
+}else if(origin=="zone1"&&des=="zone4"){
+    return 5;
+}else if(origin=="zone1"&&des=="zone5"){
+    return 7;
+}else if(origin=="zone1"&&des=="zone6"){
+    return 7;
+}else{}
+
+
+if(origin=="zone2"&&des=="zone1"){
+    return 5;
+}else if(origin=="zone2"&&des=="zone2"){
+    return 5;
+}else if(origin=="zone2"&&des=="zone3"){
+    return 5;
+}else if(origin=="zone2"&&des=="zone4"){
+    return 7;
+}else if(origin=="zone2"&&des=="zone5"){
+    return 7;
+}else if(origin=="zone2"&&des=="zone6"){
+    return 7;
+}else{}
+
+
+if(origin=="zone3"&&des=="zone1"){
+    return 5;
+}else if(origin=="zone3"&&des=="zone2"){
+    return 5;
+}else if(origin=="zone3"&&des=="zone3"){
+    return 5;
+}else if(origin=="zone3"&&des=="zone4"){
+    return 7;
+}else if(origin=="zone3"&&des=="zone5"){
+    return 7;
+}else if(origin=="zone3"&&des=="zone6"){
+    return 7;
+}else{}
+
+
+if(origin=="zone4"&&des=="zone1"){
+    return 7;
+}else if(origin=="zone4"&&des=="zone2"){
+    return 7;
+}else if(origin=="zone4"&&des=="zone3"){
+    return 7;
+}else if(origin=="zone4"&&des=="zone4"){
+    return 7;
+}else if(origin=="zone4"&&des=="zone5"){
+    return 7;
+}else if(origin=="zone4"&&des=="zone6"){
+    return 7;
+}else{}
+
+
+
+if(origin=="zone5"&&des=="zone1"){
+    return 7;
+}else if(origin=="zone5"&&des=="zone2"){
+    return 7;
+}else if(origin=="zone5"&&des=="zone3"){
+    return 7;
+}else if(origin=="zone5"&&des=="zone4"){
+    return 7;
+}else if(origin=="zone5"&&des=="zone5"){
+    return 7;
+}else if(origin=="zone5"&&des=="zone6"){
+    return 7;
+}else{}
+
+if(origin=="zone6"&&des=="zone1"){
+    return 7;
+}else if(origin=="zone6"&&des=="zone2"){
+    return 7;
+}else if(origin=="zone6"&&des=="zone3"){
+    return 7;
+}else if(origin=="zone6"&&des=="zone4"){
+    return 7;
+}else if(origin=="zone6"&&des=="zone5"){
+    return 7;
+}else if(origin=="zone6"&&des=="zone6"){
+    return 7;
+}else{}
+
+
+
+
+
+return 0;
+}
 
 
 
