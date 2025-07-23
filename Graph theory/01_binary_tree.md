@@ -209,7 +209,7 @@ Right subtree: 3
 ## 📌 Practice Problems
 
 
-- [ ] [Leetcode 94 – Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal)
+- [X] [Leetcode 94 – Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal)
 - [ ] [Leetcode 104 – Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree)
 - [ ] [Leetcode 226 – Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree)
 - [ ] [Leetcode 102 – Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal)
